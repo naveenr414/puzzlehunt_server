@@ -469,6 +469,11 @@ class Person(models.Model):
         max_length=20,
         blank=True,
         help_text="Person's phone number, no particular formatting")
+    umd = models.CharField(
+        max_length=5,
+        blank=False,
+        help_text="Is the Person from UMD (Yes/No)",
+        choices=[('Yes','Yes'),('No','No')])
     allergies = models.CharField(
         max_length=400,
         blank=True,

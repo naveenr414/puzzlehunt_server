@@ -27,10 +27,11 @@ class PersonForm(forms.ModelForm):
         self.fields['phone'].help_text = "Optional"
         self.fields['allergies'].help_text = "Optional"
         self.fields['allergies'].label = "Allergies"
+        self.fields['umd'].help_text="UMD or not"
 
     class Meta:
         model = Person
-        fields = ['phone', 'allergies']
+        fields = ['phone', 'allergies','umd']
 
 
 class UserForm(forms.ModelForm):
